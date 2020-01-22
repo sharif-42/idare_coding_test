@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}
+<h3>Upload File here</h3>
+<hr>
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <input type="file" name="myfile">
+    <a href="{% url 'calculation' %}">
+        <button type="submit" class="btn btn-primary">Calculate</button>
+    </a>
+    {{ data}}
+</form>
+{% endblock %}

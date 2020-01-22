@@ -39,6 +39,7 @@ DEFAULT_APPS = [
 THIRD_PARTY_APPS = [
     'import_export',
     'rest_framework',
+
 ]
 LOCAL_APPS = [
     'problem_1',
