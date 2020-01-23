@@ -3,73 +3,73 @@
 {% block content %}
 <h3>Calculation Details</h3>
 <table style="width:100%">
-    <tr>
+    <tr style=" color:#A52A2A">
         <th>Description</th>
         <th>Units</th>
         <th>Values</th>
     </tr>
     <tr>
-        <td>Pipe Inside Radius - r1 </td>
-        <td>Smith</td>
-        <td>50</td>
+        <td>Pipe Inside Radius - r1</td>
+        <td>in</td>
+        <td>{{ data.r1}}</td>
     </tr>
     <tr>
-        <td>Pipe Outside Radius - r2 </td>
-        <td>Jackson</td>
-        <td>94</td>
+        <td>Pipe Outside Radius - r2</td>
+        <td>in</td>
+        <td>{{ data.r2}}</td>
     </tr>
     <tr>
-        <td>Outer Radius of Coating 1 - r3 </td>
-        <td>Jackson</td>
-        <td>94</td>
+        <td>Outer Radius of Coating 1 - r3</td>
+        <td>in</td>
+        <td>{{ data.r3}}</td>
     </tr>
-    <tr>
-        <td>Total Pipeline Outside Diameter  </td>
+    <tr style=" color:#006400">
+        <td><b>Total Pipeline Outside Diameter </b></td>
         <td></td>
-        <td>94</td>
+        <td><b>{{ data.total}}</b></td>
     </tr>
 </table><br><br>
 
 <h3>Calculate Dry Unit Weight</h3>
 <table style="width:100%">
-    <tr>
+    <tr style=" color:#A52A2A">
         <th>Description</th>
-        <th>Units</th>
-        <th>Values</th>
+        <th>Installation Empty</th>
     </tr>
     <tr>
-        <td>Pipe Inside Radius - r1 </td>
-        <td>Smith</td>
-        <td>50</td>
+        <td>Pipe Weight per Unit Length in Air (lb/ft):</td>
+        <td>{{data2.pipe_wieght}}</td>
     </tr>
     <tr>
-        <td>Pipe Outside Radius - r2 </td>
-        <td>Jackson</td>
-        <td>94</td>
+        <td>Coating 1 Wt. per Unit Length in Air (lb/ft):</td>
+        <td>{{data2.coating_weight}}</td>
     </tr>
     <tr>
-        <td>Outer Radius of Coating 1 - r3 </td>
-        <td>Jackson</td>
-        <td>94</td>
+        <td>Contents Wt. Per Unit Length in Air (lb/ft):</td>
+        <td>{{data2.contents_weight}}</td>
+    </tr>
+        <tr style=" color:#006400">
+        <td><b>Total Pipeline Outside Diameter </b></td>
+        <td><b>{{ data2.total_weight}}</b></td>
     </tr>
     <tr>
-        <td>Total Pipeline Outside Diameter  </td>
-        <td></td>
-        <td>94</td>
+        <tr style=" color:#663399">
+        <td><b>Buoyant Force per Unit Length (lb/ft):</b></td>
+        <td><b>{{ data2.unit_length}}</b></td>
     </tr>
 </table><br><br>
 
 <h3>Summary of Submerged Weight</h3>
 <table style="width:100%">
-    <tr>
+    <tr style=" color:#A52A2A">
         <th>Description</th>
         <th>Submerged Weight/Unit Length (lb/ft)</th>
         <th>Subm. Specific Gravity with respect to S.W.</th>
     </tr>
-    <tr>
-        <td>Installation Empty</td>
-        <td>Smith</td>
-        <td>50</td>
+    <tr style=" color:#663399">
+        <td><b>Installation Empty</b></td>
+        <td><b>{{data3.submerged_weight}}</b></td>
+        <td><b>{{data3.submerged_specific}}</b></td>
     </tr>
 </table><br><br>
 
